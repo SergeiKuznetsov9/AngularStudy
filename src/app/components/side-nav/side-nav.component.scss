@@ -1,0 +1,41 @@
+:host {
+    flex-grow: 1;
+    position: relative;
+  }
+
+.side_nav_container {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .side_nav {
+        background-color: aquamarine;
+        width: 20%
+
+
+    
+    }
+
+    .side_nav_content {
+        background-color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .content_wrapper {
+            background-color: bisque;
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 95%;
+            width: 95%;
+            overflow: auto;
+
+        }
+
+    }
+}
+
