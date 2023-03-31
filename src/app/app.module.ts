@@ -9,6 +9,11 @@ import { MaterialUIModule } from './modules/material-ui.module';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { AboutNavigationComponent } from './components/contentComponents/about-navigation/about-navigation.component';
 import { AboutTemplateComponent } from './components/contentComponents/about-template/about-template.component';
+import { BasicNavigationComponent } from './components/contentComponents/about-navigation/basic-navigation/basic-navigation.component';
+import { ParamsComponent } from './components/contentComponents/about-navigation/params/params.component';
+import { ProgrammNavigationComponent } from './components/contentComponents/about-navigation/programm-navigation/programm-navigation.component';
+import { ChildNavigationComponent } from './components/contentComponents/about-navigation/child-navigation/child-navigation.component';
+import { GuardsComponent } from './components/contentComponents/about-navigation/guards/guards.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { AboutTemplateComponent } from './components/contentComponents/about-tem
     MainComponent,
     SideNavComponent,
     AboutNavigationComponent,
-    AboutTemplateComponent
+    AboutTemplateComponent,
+    BasicNavigationComponent,
+    ParamsComponent,
+    ProgrammNavigationComponent,
+    ChildNavigationComponent,
+    GuardsComponent
   ],
   imports: [
     BrowserModule,

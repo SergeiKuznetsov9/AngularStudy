@@ -1,10 +1,9 @@
 :host {
     flex-grow: 1;
     position: relative;
-  }
+}
 
 .side_nav_container {
-
     position: absolute;
     top: 0;
     bottom: 0;
@@ -12,30 +11,39 @@
     right: 0;
 
     .side_nav {
-        background-color: aquamarine;
-        width: 20%
-
-
-    
+        background-color: #434343;
+        width: 20%;
+        padding-left: 15px;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 7px 6px 19px -6px rgba(34, 60, 80, 0.12);
     }
 
     .side_nav_content {
-        background-color:white;
+        background-color: #8d8d8d;
         display: flex;
         justify-content: center;
         align-items: center;
-        
 
         .content_wrapper {
-            background-color: bisque;
-            border: 1px solid black;
+            background-color: #273051;
             border-radius: 5px;
             height: 95%;
             width: 95%;
             overflow: auto;
-
+            box-shadow: 7px 7px 10px -6px 273051;
+            color: white;
+            padding: 10px 20px;
         }
+    }
+}
 
+.menuList {
+    a {
+        color: white;
+    }
+
+    .activeLink {
+        color: orange;
     }
 }
 
