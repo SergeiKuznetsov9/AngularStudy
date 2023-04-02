@@ -1,11 +1,52 @@
 <div class="container">
-    <ul class="navMenu">
-        <li>Основы</li>
-        <li>Параметры маршрута</li>
-        <li>Параметры строки запроса</li>
-        <li>Программная навигация</li>
-        <li>Дочерные маршруты</li>
-        <li>Гарды</li>
-    </ul>
-    
+  <swiper-container
+    class="swiper_container"
+    slides-per-view="auto"
+    slides-offset-before="20"
+    slides-offset-after="20"
+    space-between="20"
+    loop="false"
+  >
+    <swiper-slide style="width: fit-content">
+      <div>
+        <a routerLink="/navigation/basic" routerLinkActive="active_link">
+          Основы
+        </a>
+      </div>
+    </swiper-slide>
+    <swiper-slide style="width: fit-content">
+      <a routerLink="/navigation/params" routerLinkActive="active_link">
+        Параметры маршрута
+      </a>
+    </swiper-slide>
+    <swiper-slide style="width: fit-content">
+      <a routerLink="/navigation/params" routerLinkActive="active_link">
+        Параметры строки запроса
+      </a>
+    </swiper-slide>
+    <swiper-slide style="width: fit-content">
+      <a routerLink="/navigation/programm" routerLinkActive="active_link">
+        Программная навигация
+      </a>
+    </swiper-slide>
+    <swiper-slide style="width: fit-content">
+      <a routerLink="/navigation/child" routerLinkActive="active_link">
+        Дочерные маршруты
+      </a>
+    </swiper-slide>
+    <swiper-slide style="width: fit-content">
+      <a routerLink="/navigation/guards" routerLinkActive="active_link">
+        Гарды
+      </a>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="content">
+    <a target="_blank" href="https://angdev.ru/guide/route/define/"
+      >Ссылка на гайд по маршрутизации</a
+    >
+    <br />
+    <br />
+    <router-outlet></router-outlet>
+  </div>
 </div>

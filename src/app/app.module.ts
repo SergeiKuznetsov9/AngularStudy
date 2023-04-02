@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +13,8 @@ import { ParamsComponent } from './components/contentComponents/about-navigation
 import { ProgrammNavigationComponent } from './components/contentComponents/about-navigation/programm-navigation/programm-navigation.component';
 import { ChildNavigationComponent } from './components/contentComponents/about-navigation/child-navigation/child-navigation.component';
 import { GuardsComponent } from './components/contentComponents/about-navigation/guards/guards.component';
+import { AboutOthersComponent } from './components/contentComponents/about-others/about-others.component';
+import { SwiperComponent } from './components/contentComponents/about-others/swiper/swiper.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +27,18 @@ import { GuardsComponent } from './components/contentComponents/about-navigation
     ParamsComponent,
     ProgrammNavigationComponent,
     ChildNavigationComponent,
-    GuardsComponent
+    GuardsComponent,
+    AboutOthersComponent,
+    SwiperComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialUIModule
+    MaterialUIModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,32 @@
+<p>
+  Ссылка на библиотеку:
+  <a target="_blank" href="https://swiperjs.com/element">Swiper JS</a>
+</p>
+<p>Для того, чтобы добавить в Ангулар проект свайпер, необходимо:</p>
+<p>1. Установить пакет:</p>
+<code> npm install swiper </code>
+<br />
+<br />
+<p>2. В корневой модуль заимпортировать CUSTOM_ELEMENTS_SCHEMA:</p>
+<pre>
+import &#123; CUSTOM_ELEMENTS_SCHEMA, NgModule &#125; from '@angular/core';
+</pre>
+<p>3. В корневом компоненте инициализировать его:</p>
+<pre>
+    import &#123; AfterViewInit, Component &#125; from '@angular/core';
+    import &#123;register&#125; from 'swiper/element/bundle';
+    
+    @Component(&#123;
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
+    &#125;)
+    export class AppComponent implements AfterViewInit &#123;
+    title = 'AngularStudy';
+    
+    ngAfterViewInit(): void &#123;
+    register();
+    &#125;
+    &#125;    
+</pre>
+<p>4. После этого, в любом комопненте возможно его применение.</p>
