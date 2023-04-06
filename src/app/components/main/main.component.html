@@ -1,1 +1,12 @@
-<p>main works!</p>
+<form [formGroup]="myForm" novalidate>
+  <div>
+    <label>Passenger</label>
+    <input type="text" formControlName="passenger" />
+  </div>
+
+  <div>
+    <label>Age</label>
+    <input type="number" formControlName="passengerAge" />
+  </div>
+</form>
+<button (click)="showInf()">ShowInf</button>
