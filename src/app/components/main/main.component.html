@@ -1,1 +1,44 @@
-<p>main works!</p>
+<!--
+  В представлении активация анимации контролируется специальным атрибутом (имя триггера
+  с префиксом @, заключенное в квадратные скобки). В качестве значения атрибуту передается
+  название одного из определенных для анимации состояний. Angular animation срабатывает,
+  если описана пара состояний "было" => "стало"
+-->
+<p class="block-with-text" [@expandedParagraph]="state">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+</p>
+<button (click)="expand()">Expand Paragraph</button>
+<hr/>
+<button (click)="isVisible = !isVisible">Set visible</button>
+<p class="block-with-opacity" @displayingAnything *ngIf="isVisible"></p>
+<hr/>
+<button (click)="fontExpand()">Set Jump</button>
+<!--
+  Для полного контроля Angular анимации у триггера предусмотрено два события start() и
+  done(), которые срабатывают при старте и окончании анимации соответственно.
+-->
+<p
+  [@displayingWithEasing]="stateForFontJumping"
+  (@displayingWithEasing.start)="animateStart($event)"
+  (@displayingWithEasing.done)="animateDone($event)"
+>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, sequi modi. Rem, facilis?
+</p>
+<hr/>
+<hr/>
+<hr/>
+<h2>Переиспользуемая анимация</h2>
+<div [@reusableAnimation]="stateForReusableAnimation">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae amet doloribus.
+</div>
+<button (click)="startReusableAnimation()">Set Reuse Animation</button>
+<hr/>
+<hr/>
+<hr/>
+<h2>Сложная анимация</h2>
+<app-complex-animation></app-complex-animation>
+
+
+
+
+
