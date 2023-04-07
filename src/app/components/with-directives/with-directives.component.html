@@ -1,0 +1,25 @@
+<h2>С диррективами</h2>
+
+<form [formGroup]="myForm" novalidate>
+  <mat-form-field appearance="outline" appDateFormat>
+    <input
+      matInput
+      formControlName="releasedAt"
+      [matDatepicker]="releasedAtPicker"
+    />
+    <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
+    </mat-datepicker-toggle>
+    <mat-datepicker #releasedAtPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" appYearMonthFormat>
+    <input
+      matInput
+      formControlName="releasedAt"
+      [matDatepicker]="releasedAtPicker2"
+    />
+    <mat-datepicker-toggle matSuffix [for]="releasedAtPicker2">
+    </mat-datepicker-toggle>
+    <mat-datepicker #releasedAtPicker2></mat-datepicker>
+  </mat-form-field>
+</form>

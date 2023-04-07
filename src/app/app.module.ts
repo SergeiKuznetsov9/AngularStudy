@@ -19,6 +19,10 @@ import { MAT_DATE_FORMATS } from '@angular/material/core';
 /* import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { AppDateAdapter, APP_DATE_FORMATS } from './adapters/dateAdapter'; */
 import { DateFormatComponent } from './components/date-format/date-format.component';
+import { WithDirectivesComponent } from './components/with-directives/with-directives.component';
+
+import { DateFormatDirective } from './directives/appDateFormat';
+import { YearMonthFormatDirective } from './directives/appYearMonthFormat';
 
 const MY_FORMATS = {
   parse: {
@@ -40,7 +44,10 @@ const MY_FORMATS = {
     BasicPickerComponent,
     OpenByClickingInputPickerComponent,
     RussianDateComponent,
-    DateFormatComponent
+    DateFormatComponent,
+    WithDirectivesComponent,
+    DateFormatDirective,
+    YearMonthFormatDirective,
   ],
   imports: [
     BrowserModule,
