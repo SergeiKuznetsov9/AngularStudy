@@ -1,0 +1,30 @@
+<h2>Basic DataPicker</h2>
+
+<form [formGroup]="myForm" novalidate>
+
+
+
+
+
+  <!--
+    Это код датаПикера
+  -->
+<mat-form-field appearance="outline">
+  <input matInput formControlName="releasedAt" [matDatepicker]="releasedAtPicker">
+<!-- В данном случае for привязывает кнопку к инпуту  -->
+  <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
+  </mat-datepicker-toggle>
+  <!-- Добавляет инпуту модалку календаря, которая изначально скрыта -->
+  <!-- Чтобы она открывалась нужна кнопка, которая добавлена выше -->
+  <mat-datepicker #releasedAtPicker></mat-datepicker>
+</mat-form-field>
+
+
+
+
+
+</form>
+<button (click)="showFormData()">ShowFormData</button>
+
+
+

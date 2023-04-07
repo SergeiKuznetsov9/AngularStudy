@@ -1,0 +1,54 @@
+<h2>Дата пикер с momentJS adapter</h2>
+<!-- 
+  Подключаем библиотеку momentJS
+  И устанавливаем moment-adapter:
+
+  npm install moment
+  npm install @angular/material-moment-adapter
+
+  Далее импортируем MatDatepicker and MatMomentDateModule в модуль. Также необходимо импортировать
+  FormsModule, чтобы использовать [(ngModel)].
+
+  В массиве providers, определим MAT_DATE_FORMATS с useValue: MY_FORMATS, чтобы задекларирвать кастомный 
+  формат, который нужно использовать:
+
+  import { MAT_DATE_FORMATS } from '@angular/material/core';
+  providers: [
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+  ],
+
+  Также нужно определить MY_FORMATS, а именно два его свойства: dateInput и display:
+
+  const MY_FORMATS = {
+  parse: {
+    dateInput: 'DD MMMM YYYY',
+  },
+  display: {
+    dateInput: 'DD MMMM YYYY',
+    monthYearLabel: 'MMMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
+
+Это все можно сделать на уровне компонента.
+
+Дальнейшая работа производится на уровне класса
+
+-->
+
+<form [formGroup]="myForm" novalidate>
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [matDatepicker]="releasedAtPicker"
+      formControlName="releasedAt"
+      (dateInput)="addEvent('input', $event)"
+      (dateChange)="addEvent('change', $event)"
+    />
+    <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
+    </mat-datepicker-toggle>
+    <mat-datepicker #releasedAtPicker></mat-datepicker>
+  </mat-form-field>
+</form>
+<button (click)="showFormData()">ShowFormData</button>

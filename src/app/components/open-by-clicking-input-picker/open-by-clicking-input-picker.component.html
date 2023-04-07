@@ -1,0 +1,36 @@
+<h2>Open by clicking input DataPicker</h2>
+<h2>Icon at start</h2>
+<h2>Another icon</h2>
+
+
+<form [formGroup]="myForm" novalidate>
+
+
+
+
+
+  <!--
+    Чтобы календарь открывался по клику на инпут, добавим инпуту обработчик клика
+  -->
+<mat-form-field appearance="outline">
+  <input matInput formControlName="releasedAt" [matDatepicker]="releasedAtPicker" (click)="releasedAtPicker.open()">
+  <!-- Чтобы отодвинуть иконку в начало, нужно указать  matPrefix вместо matSuffix -->
+  <mat-datepicker-toggle matPrefix [for]="releasedAtPicker">
+
+    <!-- Чтобы изменить иконку, нужно добавить следующий тег -->
+    <mat-icon matDatepickerToggleIcon>
+      face
+    </mat-icon>
+  </mat-datepicker-toggle>
+  <mat-datepicker #releasedAtPicker></mat-datepicker>
+</mat-form-field>
+
+
+
+
+
+</form>
+<button (click)="showFormData()">ShowFormData</button>
+
+
+

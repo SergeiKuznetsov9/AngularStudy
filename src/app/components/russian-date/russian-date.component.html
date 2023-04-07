@@ -1,0 +1,28 @@
+<h2>DataPicker with russian date</h2>
+
+<form [formGroup]="myForm" novalidate>
+
+
+
+  <!-- 
+    Для реализации изложенного написан кастомный адаптер
+    (в папке адаптеры)
+  -->
+
+
+<mat-form-field appearance="outline">
+  <input matInput formControlName="releasedAt" [matDatepicker]="releasedAtPicker">
+  <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
+  </mat-datepicker-toggle>
+  <mat-datepicker #releasedAtPicker></mat-datepicker>
+</mat-form-field>
+
+
+
+
+
+</form>
+<button (click)="showFormData()">ShowFormData</button>
+
+
+
