@@ -9,6 +9,8 @@ import { BasicComponent } from './components/basic/basic.component';
 import { CreateOperatorsComponent } from './components/create-operators/create-operators.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { WhereClientSwipedComponent } from './components/practice/where-client-swiped/where-client-swiped.component';
+import { SandBoxComponent } from './components/practice/sand-box/sand-box.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { WhereClientSwipedComponent } from './components/practice/where-client-s
     BasicComponent,
     CreateOperatorsComponent,
     PipeComponent,
-    WhereClientSwipedComponent
+    WhereClientSwipedComponent,
+    SandBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
