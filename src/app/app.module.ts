@@ -11,6 +11,7 @@ import { PipeComponent } from './components/pipe/pipe.component';
 import { WhereClientSwipedComponent } from './components/practice/where-client-swiped/where-client-swiped.component';
 import { SandBoxComponent } from './components/practice/sand-box/sand-box.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { CombinedSwipersComponent } from './components/practice/combined-swipers/combined-swipers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatSliderModule } from '@angular/material/slider';
     CreateOperatorsComponent,
     PipeComponent,
     WhereClientSwipedComponent,
-    SandBoxComponent
+    SandBoxComponent,
+    CombinedSwipersComponent
   ],
   imports: [
     BrowserModule,
