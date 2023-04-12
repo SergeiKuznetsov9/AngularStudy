@@ -8,3 +8,4 @@ import { Component } from '@angular/core';
 export class MainComponent {
 
 }
+// https://www.internet-technologies.ru/articles/sozdanie-karuseli-s-pom-css-scroll-snap-i-js.html
