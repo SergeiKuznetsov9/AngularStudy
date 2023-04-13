@@ -13,6 +13,7 @@ import { SandBoxComponent } from './components/practice/sand-box/sand-box.compon
 import { MatSliderModule } from '@angular/material/slider';
 import { CombinedSwipersComponent } from './components/practice/combined-swipers/combined-swipers.component';
 import { CustomOperatorsComponent } from './components/custom-operators/custom-operators.component';
+import { HighOrderOperatorsComponent } from './components/high-order-operators/high-order-operators.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CustomOperatorsComponent } from './components/custom-operators/custom-o
     WhereClientSwipedComponent,
     SandBoxComponent,
     CombinedSwipersComponent,
-    CustomOperatorsComponent
+    CustomOperatorsComponent,
+    HighOrderOperatorsComponent
   ],
   imports: [
     BrowserModule,
