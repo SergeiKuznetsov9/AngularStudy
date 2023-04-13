@@ -1,0 +1,96 @@
+/* https://html5book.ru/css-grid/ */
+/* https://tuhub.ru/posts/css-grid-complete-guide */
+
+.root {
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
+  padding: 3rem;
+}
+
+// Для создания грид контейнера применяем свойство display: grid.
+
+// по умолчанию имеет один столбец и одну строку, которые занимают полный размер контейнера.
+
+// Для разделения контейнера-сетки на столбцы и строки используются свойства
+// grid-template-columns, grid-template-rows и grid-template-areas.
+
+// С помощью этих свойств можно определить сетку явно.
+
+// Количество строк / столбцов задается с помощью свойств grid-template-rows и grid-template-columns.
+
+.header {
+  grid-area: header;
+  background-color: rgb(130, 130, 235);
+}
+
+.sideNav {
+  grid-area: sideNav;
+  background-color: rgb(92, 138, 92);
+}
+
+.main {
+  grid-area: main;
+  background-color: rgb(16, 121, 86);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: indigo;
+}
+
+
+.gridContainer1 {
+  background-color: beige;
+  width: 100%;
+  height: 45%;
+
+
+  display: grid;
+
+  grid-template-rows:  15% 70% 15%; /* 3 строки */
+  grid-template-columns: 20% 5% 75%; /* 3 столбца */
+  // Определяет колонки и строки сетки с помощью списка значений разделённого пробелами.
+  // Значения представляют из себя размер трека, а пробелы между ними представляют линии сетки.
+
+  // значения могут быть частью свободного пространства в сетке (определяется с помощью единицы fr)
+
+  // При таком синтаксисе линиям сетки автоматически присваиваются числовые имена
+  // принеобходимости задать им свои имена, нужно использовать другой синтаксис, см gridContainer2 
+
+
+
+  // Для размещения контента внутри сетки можно использовать следующий прием:
+  // 1. В HTML внутри грид-блока задаем нужное количество блоков и присваиваем им классы
+  // 2. в css этим блокам задаем свойства grid-area
+  // 3. задаем свойство grid-template-areas, в котором отражаем расположение блоков по определенным
+        // ячейкам, точка будет означать пустоту, т.е. клетка не будет принадлежать ни одной из
+        // определенных площадей
+
+  grid-template-areas:
+    "header header header"
+    "sideNav . main"
+    "footer footer footer";
+
+
+  // междуобластями можно сделать отступы следующими свойствами:
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+
+}
+
+.gridContainer2 {
+  margin-top: 2rem;
+  background-color:azure;
+  width: 100%;
+  height: 45%;
+  display: grid;
+
+
+  grid-template-rows:  [firstLine] 20% [secondLine] 40% [ThirdLine] 40% [end]; /* 3 строки */
+
+  grid-template-columns: [firstRow] 40% [secondRow] 20% [ThirdRow] 40% [LastRow]; /* 3 столбца */
+
+  
+
+}
