@@ -12,6 +12,7 @@ import { WhereClientSwipedComponent } from './components/practice/where-client-s
 import { SandBoxComponent } from './components/practice/sand-box/sand-box.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { CombinedSwipersComponent } from './components/practice/combined-swipers/combined-swipers.component';
+import { CustomOperatorsComponent } from './components/custom-operators/custom-operators.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CombinedSwipersComponent } from './components/practice/combined-swipers
     PipeComponent,
     WhereClientSwipedComponent,
     SandBoxComponent,
-    CombinedSwipersComponent
+    CombinedSwipersComponent,
+    CustomOperatorsComponent
   ],
   imports: [
     BrowserModule,
