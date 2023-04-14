@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { fromEvent, interval, map, mergeAll, mergeMap, of } from 'rxjs';
+import { fromEvent, interval, map, mergeAll, mergeMap, of, switchAll, switchMap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -67,6 +67,7 @@ sequence$.subscribe(console.log)
  */
 
 // Но есть способ лучше, использовать mergeMap вместо map и mergeAll
+// http://rxjs.rsh.icu/operators/mergeMap
 /* 
 const sequence$ = fromEvent(this.inputEl.nativeElement, 'input')
 .pipe(
@@ -83,9 +84,9 @@ sequence$.subscribe(console.log)
 
 
 // Результатом такого кода будет паралельная обработка запросов на каждый введенный символ в инпуте.
-// Колличество параллельных запросов (потоков) можно сократить при помомщи второго аргумента:
-/* 4.39 */
-const sequence$ = fromEvent(this.inputEl.nativeElement, 'input')
+// Колличество параллельных запросов (потоков) можно сократить при помомщи второго аргумента - 
+// количества обрабатываемых запросов:
+/* const sequence$ = fromEvent(this.inputEl.nativeElement, 'input')
 .pipe(
   mergeMap( e => {
     const value = (e.target as HTMLInputElement).value
@@ -94,16 +95,29 @@ const sequence$ = fromEvent(this.inputEl.nativeElement, 'input')
   map( el => el.response)
 )
 
-sequence$.subscribe(console.log)
+sequence$.subscribe(console.log) */
 
 
 
+// Еще один интересный оператор switchAll и switchMap (разница между ними аналогична уже рассмотренным)
+// Они похожи на предыдущие, но разница в том, что при возникновении нового события, производится отписка
+// от предыдущего (если он еще не завершен)
+
+// Но для того, чтобы потоки не порождались на каждый чих, можно использовать debounceTime(300)
+
+// Еще один интересный оператор concatAll и concatMap (разница между ними аналогична уже рассмотренным)
+// Они похожи на предыдущие, но разница в том, что подписка на следующий поражденный поток будет
+// производится лишь после того, как предыдущий поток заэмитит событие (но подписка будет произведена). Ниже визуализация
+// http://rxjs.rsh.icu/operators/mergeMap
+// при возникновении нового события, производится отписка
+// от предыдущего (если он еще не завершен)
 
 
-
-
-
-
+// Еще один интересный оператор exhaustAll и exhaustMap (разница между ними аналогична уже рассмотренным)
+// Они похожи на предыдущие, но разница в том, что подписка на следующий поражденный поток будет
+// производится лишь после того, как предыдущий поток заэмитит событие и только в том случае, если новый эмит
+// возникнет после такого эмита. Прочие эмиты будут проигнорированы. Ниже визуализация
+// http://rxjs.rsh.icu/operators/mergeMap
 
 
 

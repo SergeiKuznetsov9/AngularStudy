@@ -14,6 +14,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { CombinedSwipersComponent } from './components/practice/combined-swipers/combined-swipers.component';
 import { CustomOperatorsComponent } from './components/custom-operators/custom-operators.component';
 import { HighOrderOperatorsComponent } from './components/high-order-operators/high-order-operators.component';
+import { LiveSearchingComponent } from './components/practice/live-searching/live-searching.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HighOrderOperatorsComponent } from './components/high-order-operators/h
     SandBoxComponent,
     CombinedSwipersComponent,
     CustomOperatorsComponent,
-    HighOrderOperatorsComponent
+    HighOrderOperatorsComponent,
+    LiveSearchingComponent
   ],
   imports: [
     BrowserModule,
