@@ -15,6 +15,9 @@ import { CombinedSwipersComponent } from './components/practice/combined-swipers
 import { CustomOperatorsComponent } from './components/custom-operators/custom-operators.component';
 import { HighOrderOperatorsComponent } from './components/high-order-operators/high-order-operators.component';
 import { LiveSearchingComponent } from './components/practice/live-searching/live-searching.component';
+import { DragAndDropComponent } from './components/practice/drag-and-drop/drag-and-drop.component';
+import { ErrorHandlingComponent } from './components/error-handling/error-handling.component';
+import { SubjectComponent } from './components/subject/subject.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { LiveSearchingComponent } from './components/practice/live-searching/liv
     CombinedSwipersComponent,
     CustomOperatorsComponent,
     HighOrderOperatorsComponent,
-    LiveSearchingComponent
+    LiveSearchingComponent,
+    DragAndDropComponent,
+    ErrorHandlingComponent,
+    SubjectComponent
   ],
   imports: [
     BrowserModule,
