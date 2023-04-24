@@ -1,0 +1,33 @@
+.root {
+  background-color: azure;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 302px;
+  width: 516px;
+  border: 1px solid #0000002d;
+  border-radius: 3px;
+}
+
+.header {
+  height: 60px;
+  padding: 16px;
+  font-size: 24px;
+  background-color: #00000008;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+.button {
+  width: 100px;
+}

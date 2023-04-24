@@ -1,0 +1,21 @@
+<div class="root">
+  <div class="card">
+    <div class="header">JWT Login Example</div>
+    <form class="form" [formGroup]="myForm" (ngSubmit)="submit()">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Type your name" formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Type password"
+          formControlName="password"
+        />
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="button">Login</button>
+    </form>
+  </div>
+</div>
