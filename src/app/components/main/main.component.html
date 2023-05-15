@@ -1,1 +1,34 @@
-<p>main works!</p>
+<p>
+  <strong>
+    В примере ниже мы связали инпут с formControl, тем самым сделав его
+    реактивным.
+  </strong>
+</p>
+
+<label for="txt">Simple Reactive Text Control</label>
+<!--
+  Чтобы это все заработало в formControl нужно прокинуть экземпляр класса
+  formControl.
+-->
+<input type="text" id="txt" [formControl]="simpleTextControl" />
+<!--
+  То что мы сделали, а именно связали инпут с formControl, тем самым сделав его реактивным,
+  называется реализация сущности controlValueAccessor.
+  
+  Это можно сделать из любого элемента 
+-->
+<pre>Current value of input is: {{ simpleTextControl.value }}</pre>
+<hr />
+<p>
+  <strong>
+    Но в ангуляр реактивным можно сделать абсолютно любой элемент
+  </strong>
+</p>
+<p>
+  Стоит отметить, что для нативных HTML-контроллов в ангуляре уже реализованы по
+  дефолту controlValueAccessor. Для дргуих элементов это нужно делать самому.
+  Образец того как это можно сделать реализован в следующем компоненте:
+</p>
+
+<hr />
+<app-custom-control></app-custom-control>
